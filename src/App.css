@@ -412,6 +412,8 @@
 #contacto > button {
   background-color: var(--r-button);
   border: none;
+  color: var(--w);
+  font-weight: 500;
 }
 
 #contact-us > div > div {

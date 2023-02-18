@@ -15,7 +15,7 @@ function Carrusel( { elementos, onClick } ) {
       <div className="carousel-inner">
         {elementos.map((x,i)=><div key={i} className={i===0?"carousel-item active":"carousel-item"}>
           <img className="d-block w-100" src={x.url} alt={`${i} Slide`} />
-          <div style={{textAlign:'left',height:'30rem'}} class="carousel-caption d-none d-md-block">
+          <div style={{textAlign:'left',height:'30rem', margin: 'auto', width: '50%', padding:'0 1%'}} class="carousel-caption d-none d-md-block">
           {i===1?<h3 style={{fontStyle:'italic'}}>Best Offer</h3>:''}
           <h3>{x.texto}</h3>
           <h1 style={{fontSize:'3.5rem'}}>{x.titulo}</h1>
