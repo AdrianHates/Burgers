@@ -1,13 +1,13 @@
 function Footer ( { logo } ) {
   return(
     <div className='footer'>
-      <div className='logo'>
+      <a href='/' className='logo'>
         <img alt='logo' src={logo} />
         <div>
           <p>Cangre</p>
           <h5>Burger</h5>
         </div>
-      </div>
+      </a>
       <div id='vinculosFooter'>
         <div id='redes'>
           <i className="fa fa-facebook" aria-hidden="true"></i>

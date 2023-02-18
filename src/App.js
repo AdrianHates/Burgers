@@ -32,7 +32,17 @@ function mapear(array) {
 
 function App() {
 
-  const elementos = ['https://technocio.com/wp-content/uploads/2020/05/hamburguesa.jpg','https://estaticos-cdn.elperiodico.com/clip/1a0a98f5-754d-49f3-a3dd-455d1b98203e_alta-libre-aspect-ratio_default_0.jpg']
+  const elementos = [{
+    url: 'https://technocio.com/wp-content/uploads/2020/05/hamburguesa.jpg',
+    texto: 'Express food to raise your mood!',
+    titulo: 'Mexican Burger',
+    precio: 14.99
+  }, {
+    url: 'https://estaticos-cdn.elperiodico.com/clip/1a0a98f5-754d-49f3-a3dd-455d1b98203e_alta-libre-aspect-ratio_default_0.jpg',
+  texto: 'Enjoy this amazing offer, which includes our Standard Taco and Mexican Sauce.',
+  titulo: 'Double Snack Menu',
+  precio: 40.99
+  }]
   
   const productos = mapear(productosD)
   const [prod, setProd] = useState(productos)
@@ -88,9 +98,17 @@ function App() {
     })
   },[])
 
+  function Oculto() {
+    let a = document.getElementById('vinculosOcultos')
+    if(a.style.display==='none') {
+    a.style.display='flex'
+    } else {
+      a.style.display='none'
+    }
+  }
   return (
     <div className="App">
-      <Encabezado logo={logoBurger} />
+      <Encabezado logo={logoBurger} onClick={Oculto} />
       <Carrusel elementos={elementos} />
       
       <div id="encargado">

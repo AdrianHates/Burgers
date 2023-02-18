@@ -1,12 +1,24 @@
-function Encabezado ( { logo } ) {
+function Encabezado ( { logo, onClick } ) {
   return(
     <div id='encabezado'>
-      <div className='logo'>
+      
+      <a href='/' className='logo'>
         <img alt='logo' src={logo} />
         <div>
           <p>Cangre</p>
           <h5>Burger</h5>
         </div>
+      </a>
+      <div id="inv">
+      <button onClick={onClick} id='oculto'>☰</button>
+      <div style={{display:'none'}} id='vinculosOcultos'>
+        <ul>
+            <li><a href='#encargado'>About</a></li>
+            <li><a href='#cuadricula'>Pricing</a></li>
+            <li><a href='#contact-us'>Contacts</a></li>
+            <li>All Blocks</li>
+        </ul>
+      </div>
       </div>
       <div id='vinculos'>
         <div id='secciones'>

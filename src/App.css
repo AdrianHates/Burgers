@@ -20,16 +20,18 @@
 /*Encabezado*/
 
 #encabezado {
-  width: 100%;
   position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
+  margin: 0 auto;
   background-color: var(--n);
-  color: white;
+  color: var(--w);
   display: flex;
+  flex-wrap: wrap;
+  gap: 30rem;
   justify-content: center;
   align-items: center;
-  gap: 30rem;
 }
 
 .logo > img {
@@ -43,6 +45,8 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  text-decoration: none;
+  color: var(--w)
 }
 
 .logo > div {
@@ -54,6 +58,7 @@
   margin-bottom: -.5rem;
   font-weight: 1000;
   font-size: 1.5rem;
+  color: var(--w);
 }
 
 .logo > div > h5 {
@@ -64,18 +69,19 @@
 
 #vinculos {
   display: flex;
-  gap: 4rem;  
+  flex-wrap: wrap;
+  gap: 2.5rem 
 }
 
 
 #secciones > ul {
   display: flex;
-  height: 100%;
   list-style-type: none;
   gap: 1.5rem;
   font-size: 1.25rem;
   font-weight: 500;
   align-items: center;
+  height: 100%;
 }
 
 #secciones > ul > li > a {
@@ -85,8 +91,10 @@
 
 #redes {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1rem
 }
 
 
@@ -112,7 +120,7 @@
     gap: 1rem
   }
 #encargado > img, #encargado > div, #encargado > #form {
-  width: 400px;
+  width: 300px;
 }
 
 #encargado > div > img {
@@ -121,7 +129,7 @@
 
 /*Form*/
 
-#form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -129,27 +137,27 @@
   color: var(--w)
 }
 
-#form > input {
+.form > input {
   height: 3rem;
   padding-left: 1rem
 }
 
-#form > textarea {
+.form > textarea {
   padding: .5rem 1rem;
 }
 
-#form > input:focus, #form > textarea:focus {
+.form > input:focus, .form > textarea:focus {
   outline: none;
 }
 
-#form > button {
+.form > button {
   background-color: var(--r-button);
   color: var(--w);
   font-weight: 500;
   transition: all .5s ease-out;
 }
 
-#form > button:hover {
+.form > button:hover {
   background-color: var(--dorado);
   color: var(--n)
 }
@@ -417,10 +425,75 @@
 /*Footer*/
 .footer {
   display: flex;
+  flex-wrap: wrap;
   background-color: var(--n);
   justify-content: center;
-  color: var(--w);
-  height: 5rem;
+  height: auto;
   align-items: center;
   gap: 27.5%
 }
+
+.footer > a {
+  text-decoration: none;
+  color: var(--w)
+}
+
+.footer > div {
+  color: var(--w)
+}
+
+#inv {
+  display: none
+}
+
+@media (max-width: 1200px) {
+  #secciones {
+    display: none
+  }
+
+  #inv > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 .2rem .2rem .2rem;
+    padding: 0;
+    position: absolute;
+    margin-top: -.27rem;
+    margin-left: .12rem;
+    background-color: var(--r-button);
+  }
+
+  #vinculosOcultos > ul > li > a {
+    text-decoration: none;
+    color: var(--w);
+  }
+
+  #vinculosOcultos > ul {
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+    font-weight: 500;
+  }
+
+  #encabezado {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #inv {
+    display:block;
+    color: var(--w);
+  }
+
+  #inv > button {
+    display: flex;
+    background-color: var(--r-button);
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+  }
+  #oculto {
+    color: var(--w)
+  }
+}
+
