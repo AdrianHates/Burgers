@@ -106,6 +106,18 @@ function App() {
       a.style.display='none'
     }
   }
+
+  useEffect(function iniciarMap(){
+    var coord = {lat:-34.5956145 ,lng: -58.4431949};
+    var map = new window.google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+    });
+    var marker = new window.google.maps.Marker({
+      position: coord,
+      map: map
+    });
+},[])
   return (
     <div className="App">
       <Encabezado logo={logoBurger} onClick={Oculto} />
@@ -135,7 +147,7 @@ customer’s satisfaction and introducing services that we provide for each one 
         <h1>Contact Us</h1>
         <div>
           <Contacto />
-          <div>Mapa Google</div>
+          <div id='map'></div>
         </div>
       </div>
       <Footer logo={logoBurger} />

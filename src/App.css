@@ -448,6 +448,12 @@
   display: none
 }
 
+/* Map */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
 @media (max-width: 1200px) {
   #secciones {
     display: none

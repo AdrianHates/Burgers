@@ -4,12 +4,12 @@ function Atencion() {
       <div id='atencionGrid'>
         <div id='atencion1'>
           <h3>Free Shipping</h3>
-          <h7>Free shiping on all order</h7>
+          <h6>Free shiping on all order</h6>
           <p>Call: 1-800-1234-567</p>
         </div>
         <div id='atencion2'>
           <h3>Opening Hours</h3>
-          <h7>Monday-Sunday:</h7>
+          <h6>Monday-Sunday:</h6>
           <p>9:00am-7:00pm</p>
         </div>
       </div>
