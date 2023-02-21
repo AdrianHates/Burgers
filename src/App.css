@@ -499,6 +499,7 @@
 
 #ws {
   position: fixed;
+  z-index: 999;
   height: 5rem;
   bottom: 2rem;
   right: 2rem;
