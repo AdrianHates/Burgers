@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Burgers/static/css/main.b501683d.css",
-    "main.js": "/Burgers/static/js/main.c1ba5be6.js",
+    "main.css": "/Burgers/static/css/main.40a27f3c.css",
+    "main.js": "/Burgers/static/js/main.332f0bd5.js",
     "static/js/787.6606bfd5.chunk.js": "/Burgers/static/js/787.6606bfd5.chunk.js",
     "static/media/gente3.jpg": "/Burgers/static/media/gente3.8eb92372b1d728c95e83.jpg",
     "static/media/gente2.jpg": "/Burgers/static/media/gente2.79e6618252c30232e098.jpg",
@@ -14,12 +14,12 @@
     "static/media/menu7.jpg": "/Burgers/static/media/menu7.21c65e666f35c20ad896.jpg",
     "static/media/logoBurger.svg": "/Burgers/static/media/logoBurger.f82e2250010c004d05bdfe5eb55c4de7.svg",
     "index.html": "/Burgers/index.html",
-    "main.b501683d.css.map": "/Burgers/static/css/main.b501683d.css.map",
-    "main.c1ba5be6.js.map": "/Burgers/static/js/main.c1ba5be6.js.map",
+    "main.40a27f3c.css.map": "/Burgers/static/css/main.40a27f3c.css.map",
+    "main.332f0bd5.js.map": "/Burgers/static/js/main.332f0bd5.js.map",
     "787.6606bfd5.chunk.js.map": "/Burgers/static/js/787.6606bfd5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b501683d.css",
-    "static/js/main.c1ba5be6.js"
+    "static/css/main.40a27f3c.css",
+    "static/js/main.332f0bd5.js"
   ]
 }
