@@ -101,7 +101,7 @@ function App() {
   function Oculto() {
     let a = document.getElementById('vinculosOcultos')
     if(a.style.display==='none') {
-    a.style.display='flex'
+    a.style.display='flex';    
     } else {
       a.style.display='none'
     }
@@ -118,10 +118,33 @@ function App() {
       map: map
     });
 },[])
+
+function eventoModal() {
+  let a = document.getElementById('contModal')
+  let b = document.getElementById('capa')
+  let body = document.querySelector('body')
+  a.style.display='flex';
+  b.style.display='flex';
+  body.style.overflow='hidden'
+
+  
+  
+}
+
+function cerrarModal() {
+  let a = document.getElementById('contModal')
+  let b = document.getElementById('capa')
+  let body = document.querySelector('body')
+  a.style.display='none'
+  b.style.display='none'
+  body.style.overflow='visible'
+
+
+}
   return (
     <div className="App">
-      <Encabezado logo={logoBurger} onClick={Oculto} />
-      <Carrusel elementos={elementos} />
+      <div id='envolt'><Encabezado logo={logoBurger} onClick={Oculto} /></div>
+      <Carrusel elementos={elementos} onClick={eventoModal}/>
       
       <div id="encargado">
         
@@ -151,6 +174,12 @@ customer’s satisfaction and introducing services that we provide for each one 
         </div>
       </div>
       <Footer logo={logoBurger} />
+      <div id='capa'>
+      </div>
+      <div id='contModal'>
+      <Form id='modal' />
+      <button class="close-button" onClick={cerrarModal}>Cerrar &times;</button>
+      </div>
     </div>
   );
 }

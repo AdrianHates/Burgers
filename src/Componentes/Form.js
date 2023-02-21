@@ -1,6 +1,6 @@
-function Form() {
+function Form( { id }) {
   return(
-    <form style={{width:'25rem', padding:'1rem 3rem', height: '37.5rem'}} className="form">
+    <form id={id} style={{width:'25rem', padding:'1rem 3rem', height: '37.5rem'}} className="form">
       <h1>Take a Reservation</h1>
       <input placeholder="Name *" required />
       <input placeholder="E-mail *" required />
