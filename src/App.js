@@ -180,6 +180,7 @@ customer’s satisfaction and introducing services that we provide for each one 
       <Form id='modal' />
       <button class="close-button" onClick={cerrarModal}>Cerrar &times;</button>
       </div>
+      <a href='https://wa.me/15551234567'><img id='ws' alt='ws' src='https://www.unipile.com/wp-content/uploads/2022/02/icone-logo-whatsapp-vert.png' /></a>
     </div>
   );
 }

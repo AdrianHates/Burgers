@@ -121,6 +121,7 @@
 /*Encargado*/
 
 #encargado {
+    margin: 3rem 0;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -128,6 +129,7 @@
     align-items: center;
     gap: 1rem
   }
+
 #encargado > img, #encargado > div, #encargado > #form {
   width: 300px;
 }
@@ -493,6 +495,13 @@
   background-color: var(--n);
   color: var(--w);
   font-weight: bold;
+}
+
+#ws {
+  position: fixed;
+  height: 5rem;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 @media (max-width: 1200px) {
