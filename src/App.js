@@ -99,11 +99,12 @@ function App() {
   },[])
 
   function Oculto() {
-    let a = document.getElementById('vinculosOcultos')
-    if(a.style.display==='none') {
-    a.style.display='flex';    
+    let a = document.getElementById('efectoOculto')
+    a.style.transitionDuration='500ms'
+    if(a.style.height==='7rem') {
+    a.style.height='0';    
     } else {
-      a.style.display='none'
+      a.style.height='7rem'
     }
   }
 
@@ -138,12 +139,21 @@ function cerrarModal() {
   a.style.display='none'
   b.style.display='none'
   body.style.overflow='visible'
-
-
 }
+
   return (
     <div className="App">
-      <div id='envolt'><Encabezado logo={logoBurger} onClick={Oculto} /></div>
+      <div id='envolt'>
+        <Encabezado logo={logoBurger} onClick={Oculto}/>
+        <div id="efectoOculto">
+          <ul>
+            <li><a href='#encargado'>About</a></li>
+            <li><a href='#cuadricula'>Pricing</a></li>
+            <li><a href='#contact-us'>Contacts</a></li>
+            <li>All Blocks</li>
+          </ul>
+        </div>
+      </div>
       <Carrusel elementos={elementos} onClick={eventoModal}/>
       
       <div id="encargado">
