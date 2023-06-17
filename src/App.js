@@ -13,6 +13,7 @@ import productosD from './Datos/productosD'
 import playersD from './Datos/playersD'
 import Contacto from './Componentes/Contacto'
 import logoBurger from './svg/logoBurger.svg'
+import icono from './icone-logo-whatsapp-vert.png'
 
 const imagenes = require.context('./imagenes',true);
 const gente = require.context('./gente',true);
@@ -190,7 +191,7 @@ customer’s satisfaction and introducing services that we provide for each one 
       <Form id='modal' />
       <button class="close-button" onClick={cerrarModal}>Cerrar &times;</button>
       </div>
-      <a href='https://wa.me/15551234567'><img id='ws' alt='ws' src='https://www.unipile.com/wp-content/uploads/2022/02/icone-logo-whatsapp-vert.png' /></a>
+      <a href='https://wa.me/15551234567'><img id='ws' alt='ws' src={icono} /></a>
     </div>
   );
 }
