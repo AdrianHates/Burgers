@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/Burgers/static/css/main.ba5fd7b7.css",
-    "main.js": "/Burgers/static/js/main.cc682e82.js",
+    "main.js": "/Burgers/static/js/main.4cca0453.js",
     "static/js/787.6606bfd5.chunk.js": "/Burgers/static/js/787.6606bfd5.chunk.js",
     "static/media/gente3.jpg": "/Burgers/static/media/gente3.8eb92372b1d728c95e83.jpg",
     "static/media/gente2.jpg": "/Burgers/static/media/gente2.79e6618252c30232e098.jpg",
     "static/media/gente1.jpg": "/Burgers/static/media/gente1.d4dac545d3bef68e05b7.jpg",
+    "static/media/icone-logo-whatsapp-vert.png": "/Burgers/static/media/icone-logo-whatsapp-vert.3c88a2148dbf6e49dfae.png",
     "static/media/menu1.jpg": "/Burgers/static/media/menu1.6396d7c838ef59bb20f1.jpg",
     "static/media/menu3.jpg": "/Burgers/static/media/menu3.39d354750407eae35c20.jpg",
     "static/media/menu4.jpg": "/Burgers/static/media/menu4.b6246b5c4d6fa4044cbf.jpg",
@@ -15,11 +16,11 @@
     "static/media/logoBurger.svg": "/Burgers/static/media/logoBurger.f82e2250010c004d05bdfe5eb55c4de7.svg",
     "index.html": "/Burgers/index.html",
     "main.ba5fd7b7.css.map": "/Burgers/static/css/main.ba5fd7b7.css.map",
-    "main.cc682e82.js.map": "/Burgers/static/js/main.cc682e82.js.map",
+    "main.4cca0453.js.map": "/Burgers/static/js/main.4cca0453.js.map",
     "787.6606bfd5.chunk.js.map": "/Burgers/static/js/787.6606bfd5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba5fd7b7.css",
-    "static/js/main.cc682e82.js"
+    "static/js/main.4cca0453.js"
   ]
 }
