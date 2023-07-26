@@ -141,9 +141,15 @@
   gap: 1rem
 }
 
+#redes > i {
+  transition: scale 0.3s ease;
+  &:hover {
+    scale: 1.2
+  }
+}
 
 #redes > i:hover, #secciones > ul > li > a:hover {
-  color: red
+  color: red;
 }
 
 /*Carrusel*/
@@ -239,6 +245,7 @@
 }
 
 #cuadriculaBotones > button {
+ 
   border: none;
   background-color: var(--w);
   font-weight: 1000;
@@ -264,6 +271,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#columnas > div > img {
+  transition: scale 0.3s ease;
+}
+
+#columnas > div > img:hover {
+  scale: 1.05;
 }
 
 #columnas > div > div {
@@ -538,6 +553,10 @@
   height: 5rem;
   bottom: 2rem;
   right: 2rem;
+  transition: scale 0.3s ease;
+  &:hover {
+    scale: 1.05
+  }
 }
 
 #oculto {

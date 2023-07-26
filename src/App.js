@@ -208,12 +208,14 @@ customer’s satisfaction and introducing services that we provide for each one 
       <Footer logo={logoBurger} />
       <div id='capa'>
       </div>
+      </CustomAnimation>
       <div id='contModal'>
+      
       <Form id='modal' />
       <button class="close-button" onClick={cerrarModal}>Cerrar &times;</button>
       </div>
       <a href='https://wa.me/51914315964'><img id='ws' alt='ws' src={icono} /></a>
-      </CustomAnimation>
+      
     </div>
     
   );
