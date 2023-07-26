@@ -14,9 +14,26 @@ import playersD from './Datos/playersD'
 import Contacto from './Componentes/Contacto'
 import logoBurger from './svg/logoBurger.svg'
 import icono from './icone-logo-whatsapp-vert.png'
-
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 const imagenes = require.context('./imagenes',true);
 const gente = require.context('./gente',true);
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    
+  }
+
+  to {
+    opacity: 1;
+    
+  }
+`;
+
+function CustomAnimation({ children }) {
+  return <Reveal keyframes={customAnimation}>{children}</Reveal>;
+}
 
 function mapear(array) {
   let result = array.map((x, i) => {
@@ -143,7 +160,9 @@ function cerrarModal() {
 }
 
   return (
+    
     <div className="App">
+      
       <div id='envolt'>
         <Encabezado logo={logoBurger} onClick={Oculto}/>
         <div id="efectoOculto">
@@ -155,6 +174,7 @@ function cerrarModal() {
           </ul>
         </div>
       </div>
+      <CustomAnimation>
       <Carrusel elementos={elementos} onClick={eventoModal}/>
       
       <div id="encargado">
@@ -173,6 +193,7 @@ customer’s satisfaction and introducing services that we provide for each one 
       </div>
       
       <Cuadricula productos={prod} onClick={filtrar} />
+      
       <Testimonios personas={personas} />
       <Team players={playersD} />
       <Atencion />
@@ -192,7 +213,9 @@ customer’s satisfaction and introducing services that we provide for each one 
       <button class="close-button" onClick={cerrarModal}>Cerrar &times;</button>
       </div>
       <a href='https://wa.me/51914315964'><img id='ws' alt='ws' src={icono} /></a>
+      </CustomAnimation>
     </div>
+    
   );
 }
 

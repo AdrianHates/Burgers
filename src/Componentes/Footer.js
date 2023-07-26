@@ -4,7 +4,7 @@ function Footer ( { logo } ) {
       <a href='/' className='logo'>
         <img alt='logo' src={logo} />
         <div>
-          <p>Cangre</p>
+          <p>Fastest</p>
           <h5>Burger</h5>
         </div>
       </a>
