@@ -14,26 +14,10 @@ import playersD from './Datos/playersD'
 import Contacto from './Componentes/Contacto'
 import logoBurger from './svg/logoBurger.svg'
 import icono from './icone-logo-whatsapp-vert.png'
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
+import ScrollReveal from 'scrollreveal';
+
 const imagenes = require.context('./imagenes',true);
 const gente = require.context('./gente',true);
-
-const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    
-  }
-
-  to {
-    opacity: 1;
-    
-  }
-`;
-
-function CustomAnimation({ children }) {
-  return <Reveal keyframes={customAnimation}>{children}</Reveal>;
-}
 
 function mapear(array) {
   let result = array.map((x, i) => {
@@ -64,6 +48,7 @@ function App() {
   
   const productos = mapear(productosD)
   const [prod, setProd] = useState(productos)
+  const [isLoading, setIsLoading] = useState(true)
   const cuadriculaBotones = document.querySelectorAll('.cuadriculaBotones')
 
   function filtrar(event) {
@@ -100,6 +85,8 @@ function App() {
   })
 
   useEffect(()=>{
+    ScrollReveal().reveal('section', { distance: '20px', origin: 'bottom', duration: 500 });
+
     const cuadriculaBotones = document.querySelectorAll('.cuadriculaBotones')
     cuadriculaBotones.forEach(x=>{
       x.addEventListener('mouseover',(e)=>{ 
@@ -126,17 +113,29 @@ function App() {
     }
   }
 
-  useEffect(function iniciarMap(){
-    var coord = {lat:-34.5956145 ,lng: -58.4431949};
-    var map = new window.google.maps.Map(document.getElementById('map'),{
+  function iniciarMap() {
+    var coord = { lat: -34.5956145, lng: -58.4431949 };
+    var map = new window.google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: coord
+      center: coord,
     });
     var marker = new window.google.maps.Marker({
       position: coord,
-      map: map
+      map: map,
     });
-},[])
+  }
+
+  useEffect(() => {
+    window.onload = function () {
+      setIsLoading(false);
+    };
+  }, [])
+
+  useEffect(() => {
+    if (!isLoading) {
+      iniciarMap(); // Llamar a la función iniciarMap una vez que isLoading sea falso
+    }
+  }, [isLoading]);
 
 function eventoModal() {
   let a = document.getElementById('contModal')
@@ -160,10 +159,15 @@ function cerrarModal() {
 }
 
   return (
-    
+    <>
+    {isLoading ? <div className='preload' ><img alt='logo' src={logoBurger} />
+        <div>
+          <p>Fastest</p>
+          <h5>Burger</h5>
+        </div></div>:
     <div className="App">
       
-      <div id='envolt'>
+      <nav id='envolt'>
         <Encabezado logo={logoBurger} onClick={Oculto}/>
         <div id="efectoOculto">
           <ul>
@@ -173,42 +177,42 @@ function cerrarModal() {
             <li>All Blocks</li>
           </ul>
         </div>
-      </div>
-      <CustomAnimation>
+      </nav>
       <Carrusel elementos={elementos} onClick={eventoModal}/>
       
-      <div id="encargado">
-        
-          <img src="https://template79170.motopreview.com/mt-demo/79100/79170/mt-content/uploads/2019/03/mt-1781-home-chef.jpg" alt="encargado" />
-          <div>
-            <h1>Jack Winsly</h1>
-            <h3>Head Chef</h3>
-            <p>Welcome to Burger King website. Here we try to share our vision about food quality, our mission about
+      <section id="encargado">
+        <div>
+          <img src="https://img.freepik.com/foto-gratis/chef-brazos-cruzados-sobre-fondo-blanco_1368-2792.jpg?w=740&t=st=1691768825~exp=1691769425~hmac=d822a544c479c26ca6e28b98e8de09b66f6a0d80d034cbb914d1ab3c341895aa" alt="encargado" />
+        </div>
+        <div>
+          <h1>Jack Winsly</h1>
+          <h3>Head Chef</h3>
+          <p>Welcome to Burger King website. Here we try to share our vision about food quality, our mission about
 customer’s satisfaction and introducing services that we provide for each one of you.</p>
-            <p>We offer fast food, served fresh with the highest quality of ingredients: fresh, handcut chicken, buns baked fresh in our own bakeries and the most delicious hot dogs with a variety of toppings.</p>
-            <img alt="firma" src="https://img.freepik.com/vector-premium/firma-manual-documentos-sobre-fondo-blanco-letras-caligrafia-dibujadas-mano_81863-5612.jpg?" />
-          </div>
+          <p>We offer fast food, served fresh with the highest quality of ingredients: fresh, handcut chicken, buns baked fresh in our own bakeries and the most delicious hot dogs with a variety of toppings.</p>
+          <img alt="firma" src="https://img.freepik.com/vector-premium/firma-manual-documentos-sobre-fondo-blanco-letras-caligrafia-dibujadas-mano_81863-5612.jpg?" />
+        </div>
         
         <Form />
-      </div>
+      </section>
       
       <Cuadricula productos={prod} onClick={filtrar} />
       
       <Testimonios personas={personas} />
       <Team players={playersD} />
       <Atencion />
-      <div id='contact-us'>
+      <section id='contact-us'>
         <h3>Get In Touch</h3>
         <h1>Contact Us</h1>
         <div>
           <Contacto />
-          <div id='map'></div>
+          <div id="map" >
+          </div>
         </div>
-      </div>
+      </section>
       <Footer logo={logoBurger} />
       <div id='capa'>
       </div>
-      </CustomAnimation>
       <div id='contModal'>
       
       <Form id='modal' />
@@ -216,8 +220,8 @@ customer’s satisfaction and introducing services that we provide for each one 
       </div>
       <a href='https://wa.me/51914315964'><img id='ws' alt='ws' src={icono} /></a>
       
-    </div>
-    
+    </div>}
+    </>
   );
 }
 

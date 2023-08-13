@@ -5,13 +5,6 @@ function Carrusel( { elementos, onClick } ) {
       <div className="carousel-indicators">
         {elementos.map((x,i)=><button key={i} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={`${i}`} aria-label={`Slide ${i+1}`} className={i === 0 ? "active" : ""} aria-current={i === 0 ? "true" : undefined}></button> )}
       </div>
-      {/*<div className="carousel-inner">
-        <div className="carousel-inner">
-        {elementos.map((x,i)=><div key={i} className={i===0?"carousel-item active":"carousel-item"}>
-          <img className="d-block w-100" src={x} alt={`${i} Slide`} />
-        </div>)}      
-        </div>
-      </div>*/}
       <div className="carousel-inner">
         {elementos.map((x,i)=><div key={i} className={i===0?"carousel-item active":"carousel-item"}>
           <img className="d-block w-100" src={x.url} alt={`${i} Slide`} />

@@ -1,6 +1,6 @@
 function Atencion() {
   return(
-    <div id='atencion'>
+    <section id='atencion'>
       <div id='atencionGrid'>
         <div id='atencion1'>
           <h3>Free Shipping</h3>
@@ -13,7 +13,7 @@ function Atencion() {
           <p>9:00am-7:00pm</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,6 +1,6 @@
 function Testimonios( { personas } ) {
   return (
-    <div id='testimonios'>
+    <section id='testimonios'>
       <h3>Testimonials</h3>
       <h1>Whats Clients Say?</h1>
       <div id="personas">
@@ -12,7 +12,7 @@ function Testimonios( { personas } ) {
         </div>
       </div>)}
     </div>
-    </div>
+    </section>
   )
 }
 

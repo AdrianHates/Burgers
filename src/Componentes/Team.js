@@ -1,6 +1,6 @@
 function Team( { players } ) {
   return (
-    <div id='team'>
+    <section id='team'>
       <h3>Our Team</h3>
       <h1>Meet Our Team</h1>
       <div id="players">
@@ -18,7 +18,7 @@ function Team( { players } ) {
         </div>
       </div>)}
     </div>
-    </div>
+    </section>
   )
 }
 

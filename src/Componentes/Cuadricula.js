@@ -1,6 +1,6 @@
 function Cuadricula( { productos, onClick } ) {
   return(
-    <div id="cuadricula">
+    <section id="cuadricula">
     <h3>Our Product</h3>
     <h2>Our Menu</h2>
     <div id="cuadriculaBotones">
@@ -17,7 +17,7 @@ function Cuadricula( { productos, onClick } ) {
         <div>${x.precio}.00</div>
       </div>)}
     </div>
-  </div>
+  </section>
   )
   
 }
