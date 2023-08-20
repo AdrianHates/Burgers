@@ -85,8 +85,7 @@ function App() {
   })
 
   useEffect(()=>{
-    ScrollReveal().reveal('section', { distance: '20px', origin: 'bottom', duration: 500 });
-
+    
     const cuadriculaBotones = document.querySelectorAll('.cuadriculaBotones')
     cuadriculaBotones.forEach(x=>{
       x.addEventListener('mouseover',(e)=>{ 
@@ -101,6 +100,7 @@ function App() {
         }
       })      
     })
+    
   },[])
 
   function Oculto() {
@@ -128,9 +128,12 @@ function App() {
   useEffect(() => {
     window.onload = function () {
       setIsLoading(false);
+      
     };
-  }, [])
+    ScrollReveal().reveal('section', { distance: '20px', origin: 'bottom', duration: 500 });
 
+  })
+ 
   useEffect(() => {
     if (!isLoading) {
       iniciarMap(); // Llamar a la función iniciarMap una vez que isLoading sea falso
